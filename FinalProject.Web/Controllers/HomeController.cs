@@ -48,6 +48,16 @@ namespace FinalProject.Web.Controllers
 			return View();
 		}
 
+		///<summary>
+		///Group contract about page
+		///</summary>
+		///<returns></returns>
+		public IActionResult About()
+		{
+			return View();
+		}
+
+
 		/// <summary>
 		/// Privacy page end point
 		/// </summary>

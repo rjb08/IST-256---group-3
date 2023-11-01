@@ -33,10 +33,10 @@ try
 
 		services.AddControllersWithViews();
 		services
-			.AddRazorPages()
-			.AddMicrosoftIdentityUI();
+			.AddRazorPages();
+			//.AddMicrosoftIdentityUI();
 
-		services.AddAutoMapper(typeof(Program).Assembly);
+		//services.AddAutoMapper(typeof(Program).Assembly);
 	});
 
 	builder.Logging.ClearProviders();
