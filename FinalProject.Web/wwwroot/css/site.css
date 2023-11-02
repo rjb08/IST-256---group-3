@@ -23,3 +23,22 @@
 {
     font-size:.75em;
 }
+.card {
+    margin-bottom: 20px; /* Add margin between each card */
+}
+
+.card-body {
+    padding: 20px; /* Adjust padding within the card body */
+}
+
+.conduct-list {
+    padding-left: 20px; /* Adjust padding for the unordered list */
+}
+
+.conduct-item {
+    list-style-type: none; 
+}
+
+.custom-card {
+        background-color: #f8f9fa; /* Light gray background color for cards */
+    }
