@@ -1,4 +1,4 @@
-.body
+/*.body
 {
   font-family: "Courier New";
   background: 
@@ -55,4 +55,11 @@
   background-color: #343A40;
   color: white;
   padding: 20px 0;
+}*/
+body {
+  padding-top: 56px;
+}
+
+.jumbotron {
+  text-align: center;
 }
