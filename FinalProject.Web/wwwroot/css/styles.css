@@ -1,4 +1,4 @@
-.body
+/*.body
 {
   font-family: "Courier New";
   background: 
@@ -55,4 +55,8 @@
   background-color: #343A40;
   color: white;
   padding: 20px 0;
+}*/
+/* Reset some default styles */
+h6 {
+  color:brown;
 }
