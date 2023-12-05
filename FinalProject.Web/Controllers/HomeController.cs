@@ -63,6 +63,16 @@ namespace FinalProject.Web.Controllers
 
 
 		/// <summary>
+		/// Order page end point
+		/// </summary>
+		/// <returns></returns>
+		public IActionResult Order()
+		{
+			return View();
+		}
+
+
+		/// <summary>
 		/// Privacy page end point
 		/// </summary>
 		/// <returns></returns>
