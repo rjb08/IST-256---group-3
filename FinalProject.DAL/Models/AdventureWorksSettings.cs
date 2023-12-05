@@ -6,5 +6,7 @@
 		public string productsUri { get; set; } = string.Empty;
 		public string suppliersUri { get; set; } = string.Empty;
 
+
+
 	}
 }

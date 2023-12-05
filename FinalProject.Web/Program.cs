@@ -1,6 +1,8 @@
 using Microsoft.Identity.Web.UI;
 using FinalProject.Web.ViewModels;
 using FinalProject.Web.Services;
+using FinalProject.DAL.Models;
+using FinalProject.DAL.Repositories;
 
 try
 {
@@ -136,8 +138,13 @@ finally
 void InjectDependencies(WebApplicationBuilder builder)
 {
 	IServiceCollection services = builder.Services;
+	services.Configure<MailSettings>(builder.Configuration.GetSection("MailSettings"));
+	services.Configure<AdventureWorksSettings>(builder.Configuration.GetSection("AdventureWorksSettings"));
 	// --------------------
 	// other services
 	// --------------------
 	services.AddTransient<IMailService, MailService>();
+	services.AddTransient<HttpClient, HttpClient>();
+	services.AddTransient<AdventureWorksRepository>();
+	services.AddHttpClient();
 }

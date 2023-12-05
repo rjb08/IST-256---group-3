@@ -4,22 +4,11 @@
 
 }
 
-<head>
-    <title>@ViewData["Group Project 3"]</title>
-	 <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Store</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
 <div>
 	@foreach(var item in Model)
 	{
 		<div>@item.CategoryName</div>
+		<img src="@item.ImageName" alt="@item.CategoryName descriptive image" />
 	}
 	<h1 class="display-4">Group 3</h1>
 		  <div class="container mt-4">
@@ -188,4 +177,4 @@
 		</div>
 	</div>
 </div>
-</body>
+
