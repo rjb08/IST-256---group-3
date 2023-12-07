@@ -25,13 +25,13 @@
     @foreach (var item in Model)
     {
         <div class="col-md-4">
-            <div>@item.CategoryName</div>
-            <img src="@item.ImageName" alt="@item.CategoryName descriptive image" />
-            <div class="card m-1">
-                    <img class="card-img-top" src="https://i.etsystatic.com/47390555/r/il/ef0305/5402159580/il_320xN.5402159580_adj0.jpg" width="100" height="300" alt = "item"/>
+                        <div class="card m-1">
+                    <img class="card-img-top" src="@item.ImageName" alt="@item.CategoryName descriptive image" style="max-width: 35%; height: 35%;"/>
                 <div class="card-body">
                     <h5 class="card-title">@item.CategoryName</h5>
                     <p class="card-text">@item.Description</p>
+					<p class="card-text">$10.00</p> 
+
                 </div>
                 <div class="card-footer">
                     <a href="#" class="btn btn-primary">View Items</a>
