@@ -4,8 +4,8 @@
 
 }
 
-<div>
-	
+
+
 	<h1 class="display-4">Group 3</h1>
 		  <div class="container mt-4">
         <div class="jumbotron">
@@ -16,135 +16,39 @@
 			and a seamless shopping journey. Step into a world where every product 
 			tells a story, and every purchase is an investment in both style and practicality.</p>
             <hr class="my-4">
-            <a class="btn btn-primary btn-lg" href="#" role="button">Shop Now</a>
-        </div>
-    </div>
+
+			<a class="btn btn-primary btn-lg" href="#scrollTarget" role="button" style="margin-bottom: 300px;" onclick="scrollDown()">Shop Now</a>
+
+        	</div>
+   		 </div>
 	
 
-<div class="row">
-    @foreach (var item in Model)
-    {
-        <div class="col-md-4">
-                        <div class="card m-1">
-                    <img class="card-img-top" src="@item.ImageName" alt="@item.CategoryName descriptive image" style="max-width: 35%; height: 35%;"/>
-                <div class="card-body">
-                    <h5 class="card-title">@item.CategoryName</h5>
-                    <p class="card-text">@item.Description</p>
-					<p class="card-text">$10.00</p> 
-
-                </div>
-                <div class="card-footer">
-                    <a href="#" class="btn btn-primary">View Items</a>
-					  <button onclick="redirectToOrder()">Buy Now</button>
-
-                </div>
-            </div>
-        </div>
-    }
-<!--
+			<div class="row">
+				<div id="destScroll"></div>
+    			@foreach (var item in Model)
+    			{
+        			<div class="col-md-4">
+    				<div class="card m-1" style="width: 400px; height: 400px; background-color: rgb(167, 214, 167);">
+        				<img class="card-img-top" src="@item.ImageName" alt="@item.CategoryName descriptive image" style="max-width: 50%; height: 50%;" />
+        			<div class="card-body" card>
+            		<h5 class="card-title">@item.CategoryName</h5>
+            		<p class="card-text">@item.Description</p>
+            		<p class="card-text">$10.00</p>
+        			</div>
+        		<div class="card-footer">
+            	<button onclick="redirectToDetails()">View Items</button>
+            	<button onclick="redirectToOrder()">Buy Now</button>
+        		</div>
+    		</div>
 	
-</div>
-	<div class="row">
-		<h2>Featured Items</h2>
-		<div class="col-3">
-                <div class="card">
-                    <img class="card-img-top" src="https://i.etsystatic.com/47390555/r/il/f78a9b/5402221844/il_640xN.5402221844_j7ly.jpg" width="150" height="300" alt = "item"/>
-                    <div class="card-body">
-						@* <a class="wt-card__action-link" title="Pumpkin Pie Sugar Scrub" href="https://www.etsy.com/listing/1585423341/pumpkin-pie-sugar-scrub?click_key=3a87eaaa587a31aac502ab866336d1c9911d8e31%3A1585423341&amp;click_sum=01f59626&amp;ref=shop_home_active_1" target="etsy.1585423341"> *@
-                        <h5 class="card-title">Pumpkin Pie Sugar Scrub</h5>                        
-						<p class="card-text">$10.00</p> 
-                        <button onclick="redirectToOrder()">Buy Now</button>
 
-            
-					</div>
-				</div>
 		</div>
 	
-		<div class="col-3">
-                <div class="card">
-                    <img class="card-img-top" src="https://i.etsystatic.com/47390555/r/il/1a4aec/5450330833/il_320xN.5450330833_aifj.jpg" width="100" height="300" alt = "item"/>
-                    <div class="card-body">
-						@* <a class="wt-card__action-link" title="Pumpkin Pie Sugar Scrub" href="https://www.etsy.com/listing/1585423341/pumpkin-pie-sugar-scrub?click_key=3a87eaaa587a31aac502ab866336d1c9911d8e31%3A1585423341&amp;click_sum=01f59626&amp;ref=shop_home_active_1" target="etsy.1585423341"> *@
-                        <h5 class="card-title">Cozy FireSide Sugar Scrub</h5>                        
-						<p class="card-text">$10.00</p> 
-                        <button onclick="redirectToOrder()">Buy Now</button>
 
-            
-					</div>
-				</div>
-		</div>
-		<div class="col-3">
-                <div class="card">
-                    <img class="card-img-top" src="https://i.etsystatic.com/47390555/r/il/84fd2a/5450339705/il_320xN.5450339705_chgg.jpg" width="100" height="300" alt = "item"/>
-                    <div class="card-body">
-						@* <a class="wt-card__action-link" title="Pumpkin Pie Sugar Scrub" href="https://www.etsy.com/listing/1585423341/pumpkin-pie-sugar-scrub?click_key=3a87eaaa587a31aac502ab866336d1c9911d8e31%3A1585423341&amp;click_sum=01f59626&amp;ref=shop_home_active_1" target="etsy.1585423341"> *@
-                        <h5 class="card-title">Snickerdoodle Sugar Scrub</h5>                        
-						<p class="card-text">$10.00</p> 
-                        <button onclick="redirectToOrder()">Buy Now</button>
 
-                
-					</div>
-				</div>
-		</div>
-		</div>
-		<div class = "row">
-			<div class="col-3">
-                <div class="card">
-                    <img class="card-img-top" src="https://i.etsystatic.com/47390555/r/il/9c90c8/5450370393/il_320xN.5450370393_mk6w.jpg" width="100" height="300" alt = "item"/>
-                    <div class="card-body">
-						@* <a class="wt-card__action-link" title="Pumpkin Pie Sugar Scrub" href="https://www.etsy.com/listing/1585423341/pumpkin-pie-sugar-scrub?click_key=3a87eaaa587a31aac502ab866336d1c9911d8e31%3A1585423341&amp;click_sum=01f59626&amp;ref=shop_home_active_1" target="etsy.1585423341"> *@
-                        <h5 class="card-title">Cupcake Sugar Scrub</h5>                        
-						<p class="card-text">$10.00</p> 
-                    
-                        <button onclick="redirectToOrder()">Buy Now</button>
+    			}
 
-            
-					</div>
-				</div>
-		</div>
-		<div class="col-3">
-                <div class="card">
-                    <img class="card-img-top" src="https://i.etsystatic.com/47390555/r/il/28e3ed/5402193676/il_320xN.5402193676_580e.jpg" width="100" height="300" alt = "item"/>
-                    <div class="card-body">
-						@* <a class="wt-card__action-link" title="Pumpkin Pie Sugar Scrub" href="https://www.etsy.com/listing/1585423341/pumpkin-pie-sugar-scrub?click_key=3a87eaaa587a31aac502ab866336d1c9911d8e31%3A1585423341&amp;click_sum=01f59626&amp;ref=shop_home_active_1" target="etsy.1585423341"> *@
-                        <h5 class="card-title">Warm Vanilla Sugar Scrub</h5>                        
-						<p class="card-text">$10.00</p> 
-                        <button onclick="redirectToOrder()">Buy Now</button>
-
-               
-					</div>
-				</div>		
-		</div>
-		<div class="col-3">
-                <div class="card">
-                    <img class="card-img-top" src="https://i.etsystatic.com/47390555/r/il/3e55e4/5450369353/il_320xN.5450369353_rix6.jpg" width="100" height="300" alt = "item"/>
-                    <div class="card-body">
-						@* <a class="wt-card__action-link" title="Pumpkin Pie Sugar Scrub" href="https://www.etsy.com/listing/1585423341/pumpkin-pie-sugar-scrub?click_key=3a87eaaa587a31aac502ab866336d1c9911d8e31%3A1585423341&amp;click_sum=01f59626&amp;ref=shop_home_active_1" target="etsy.1585423341"> *@
-                        <h5 class="card-title">Apple Orchard Sugar Scrub</h5>                        
-						<p class="card-text">$10.00</p> 
-                       <button onclick="redirectToOrder()">Buy Now</button>
-
-					</div>
-				</div>		
-		</div>
-		<div class = "row">
-			<h3>New Deals</h2>
-                <div class="col-3">
-                <div class="card">
-                    <img class="card-img-top" src="https://i.etsystatic.com/47390555/r/il/ef0305/5402159580/il_320xN.5402159580_adj0.jpg" width="100" height="300" alt = "item"/>
-                    <div class="card-body">
-						@* <a class="wt-card__action-link" title="Pumpkin Pie Sugar Scrub" href="https://www.etsy.com/listing/1585423341/pumpkin-pie-sugar-scrub?click_key=3a87eaaa587a31aac502ab866336d1c9911d8e31%3A1585423341&amp;click_sum=01f59626&amp;ref=shop_home_active_1" target="etsy.1585423341"> *@
-                        <h5 class="card-title">Coffee Cake Sugar Scrub</h5>  
-						<h6 class=".card h6">Buy 1 Get 1 Free!</h6>                      
-						<p class="card-text">$10.00</p> 
-                        <button onclick="redirectToOrder()">Buy Now</button>
-
-               
-					</div>
-				</div>		
-		</div>
-		-->
- <script>
+ 				<script>
                     function redirectToOrder() 
                     {
                         var orderPageURL = "https://localhost:7266/Home/Order";
@@ -152,7 +56,33 @@
                         window.location.href = orderPageURL;
                     }
                 </script>
-		</div>
-	</div>
-</div>
 
+				<script>
+    				function redirectToDetails() 
+					{
+       				 	var DetailsPageURL = "https://localhost:7266/Home/Details";
+
+       					window.location.href = DetailsPageURL;
+    				}
+				</script>
+
+				<script>
+    				function scrollDown() 
+					{
+       
+        			var destElement = document.getElementById('destScroll');
+
+        				
+        				destElement.scrollIntoView(
+						{
+            				behavior: 'smooth'
+       					 
+						 }
+						 );
+    				}
+				</script>
+
+				</div>
+				</div>
+			</div>
+			

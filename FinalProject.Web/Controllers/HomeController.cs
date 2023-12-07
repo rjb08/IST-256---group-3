@@ -71,6 +71,11 @@ namespace FinalProject.Web.Controllers
 			return View();
 		}
 
+		public IActionResult Details()
+		{
+			return View();
+		}
+
 
 		/// <summary>
 		/// Privacy page end point
